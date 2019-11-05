@@ -1,4 +1,17 @@
-
-<button 
-(click)="login()"
-class="btn btn-primary">Login using Google</button>
+<div class="text-center" id="loginCard">
+    <form class="form-signin" id="LoginForm" (ngSubmit)="onSubmit()">
+        <img class="mb-4" src="http://megaapp.altervista.org/wp-content/uploads/2019/03/1553489539_600x600bb.jpg" alt="" width="72" height="72" style='border-radius: 1em;'>
+        <h1 class="h3 mb-3 font-weight-normal">Salon Iris Login</h1>
+        <label for="loginEmail" class="sr-only">Email address</label>
+        <input type="email" id="loginEmail" class="form-control" placeholder="Email address" name="Email" autofocus [(ngModel)]="credentials.Email">
+        <label for="loginPass" class="sr-only">Password</label>
+        <input type="password" id="loginPass" class="form-control" placeholder="Password" name="Password" autocomplete="off" [(ngModel)]="credentials.Password" >
+        <div class="checkbox mb-3">
+        <label>
+            <input type="checkbox" value="remember-me" checked disabled> Remember me
+        </label>
+        </div>
+        <button class="btn btn-lg btn-success btn-block" [ngClass]="submitted === true ? 'disabled' : 'enabled'" type="submit">Sign in</button>
+        <p class="mt-5 mb-3 text-muted">© 2019</p>
+    </form>
+</div>

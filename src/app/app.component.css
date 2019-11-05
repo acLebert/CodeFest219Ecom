@@ -1,0 +1,9 @@
+#bottomRightModal {
+    position: fixed;
+    bottom: -10em;
+    right: 1em;
+    transition: all 1s;
+    max-width: 15em;
+    word-break: break-word;
+    white-space: pre-wrap;
+}
